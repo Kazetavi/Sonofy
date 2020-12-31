@@ -27,7 +27,7 @@ jobs:
         
       - name: Build the app
         run: |
-          openssl aes-256-cbc -k "$secret_keystore_decrypt" -in sonofy.jks.enc -out sonofy.jks -d
+          openssl aes-256-cbc -k ${{ secrets.secret_keystore_decrypt }} -in sonofy.jks.enc -out sonofy.jks -d
           chmod a+x gradlew
           ./gradlew build
 
