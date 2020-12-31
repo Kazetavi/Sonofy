@@ -28,7 +28,6 @@ jobs:
       - name: Build the app
         run: |
           chmod a+x gradlew
-          openssl aes-256-cbc -k 56B6AqLQ5wfiVF -in sonofy.jks.enc -out sonofy.jks -d
           ./gradlew build
 
       # Runs a single command using the runners shell
